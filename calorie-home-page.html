@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calorie Check</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d9f9d8;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 500px;
+        background: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #48cb8a;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+
+      .back-button:hover {
+        background-color: #36a577;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .default-image {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .calorie-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+      }
+
+      .calorie-list li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+      }
+
+      .calorie-list li:last-child {
+        border-bottom: none;
+      }
+
+      .calorie-list h2 {
+        margin: 0;
+        font-size: 16px;
+        color: #48cb8a;
+      }
+
+      .calorie-list span {
+        margin-left: auto;
+        color: #aaa;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .input-group input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .input-group button {
+        margin-left: 10px;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="Welcome-page.html" class="back-button">Back</a>
+      <header>
+        <h1>Calorie Check</h1>
+        <img
+          src="https://i.ibb.co/0yR9SWW/IMG-20241214-WA0011.jpg"
+          alt="Calorie Check"
+          class="default-image"
+        />
+        <p>Find out the calorie content of popular dishes and snacks.</p>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            id="searchInput"
+          />
+          <button>🔍</button>
+        </div>
+      </header>
+      <ul class="calorie-list" id="calorieList">
+        <li>
+          <div>
+            <a
+              href="biryani.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Biryani (1 cup): ~350-400 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="chicken-curry.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Chicken Curry (1 cup): ~300 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="panner-curry.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Paneer Curry(1 cup): ~450 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="idly.html" style="text-decoration: none; color: inherit">
+            <div>
+              <h2>Idli (1 piece): ~39 calories</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="dosa.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Dosa (plain, medium-sized): ~133 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="masala-dosa.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Masala Dosa (medium-sized): ~168-200 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="upma.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Upma (1 cup): ~192 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="medu-vada.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Medu Vada (1 piece): ~97 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <a
+              href="pongal.html"
+              style="text-decoration: none; color: inherit"
+            >
+            <h2>Pongal (1 cup): ~206 calories</h2>
+          </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        
+        <li>
+          <div>
+            <h2>Appam (1 piece): ~120 calories</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Pesarattu (Green Gram Dosa, 1 piece): ~120 calories</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Sambar (1 cup): ~130 calories</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Rasam (1 cup): ~60 calories</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Curd Rice (1 cup): ~150-200 calories</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const searchInput = document.querySelector("#searchInput");
+      const calorieList = document.querySelector("#calorieList");
+
+      searchInput.addEventListener("focus", () => {
+        calorieList.style.display = "block";
+      });
+
+      searchInput.addEventListener("input", (event) => {
+        const query = event.target.value.toLowerCase();
+        const calorieItems = document.querySelectorAll(".calorie-list li");
+
+        calorieItems.forEach((item) => {
+          const itemName = item.querySelector("h2").textContent.toLowerCase();
+          item.style.display = itemName.includes(query) ? "flex" : "none";
+        });
+      });
+
+      searchInput.addEventListener("blur", () => {
+        setTimeout(() => {
+          calorieList.style.display = "none";
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

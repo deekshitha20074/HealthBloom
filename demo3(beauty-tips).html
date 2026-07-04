@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Habits</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d9f9d8;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 500px;
+        background: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        margin: 10px 0;
+      }
+
+      .default-image {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .healthy-habits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+      }
+
+      .healthy-habits-list li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+      }
+
+      .healthy-habits-list li:last-child {
+        border-bottom: none;
+      }
+
+      .healthy-habits-list h2 {
+        margin: 0;
+        font-size: 16px;
+        color: #48cb8a;
+      }
+
+      .healthy-habits-list span {
+        margin-left: auto;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Healthy Habits</h1>
+        <img src="https://i.ibb.co/mFmT574/IMG-20241214-WA0007.jpg" alt="Healthy Habits" class="default-image" />
+        <p>Explore habits that promote health and well-being.</p>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..." id="searchInput" />
+          <button class="btn btn-outline-secondary" type="button">🔍</button>
+        </div>
+      </header>
+      <ul class="healthy-habits-list" id="healthyHabitsList">
+        <li>
+          <div>
+            <a href="hydration-page.html" style="text-decoration: none; color: inherit;">
+              <h2>Drink Plenty of Water (Hydration)</h2>
+            </a>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Maintain Balanced Diet</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Exercise Regularly</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Get Adequate Sleep</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Practice Meditation</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Avoid Junk Food</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Maintain Good Posture</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Wash Hands Regularly</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Avoid Smoking and Alcohol</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Limit Screen Time</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Protect Your Skin</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Stay Active</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Regular Health Check-ups</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <div>
+            <h2>Practice Mindfulness</h2>
+          </div>
+          <span>&gt;</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const searchInput = document.querySelector("#searchInput");
+      const healthyHabitsList = document.querySelector("#healthyHabitsList");
+
+      searchInput.addEventListener("focus", () => {
+        healthyHabitsList.style.display = "block";
+      });
+
+      searchInput.addEventListener("input", (event) => {
+        const query = event.target.value.toLowerCase();
+        const habitItems = document.querySelectorAll(".healthy-habits-list li");
+
+        habitItems.forEach((item) => {
+          const habitName = item.querySelector("h2").textContent.toLowerCase();
+          item.style.display = habitName.includes(query) ? "flex" : "none";
+        });
+      });
+
+      searchInput.addEventListener("blur", () => {
+        setTimeout(() => {
+          healthyHabitsList.style.display = "none";
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthBloom Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: #d9f9d8 !important;
+        font-family: "Muli", sans-serif;
+      }
+      h1 {
+        padding-bottom: 2rem;
+        font-weight: bold;
+      }
+      a {
+        color: #1987cb;
+      }
+      a:hover {
+        color: #48cb8a;
+        text-decoration: none;
+      }
+      .green-link {
+        color: #48cb8a !important;
+      }
+      .form-control:focus {
+        color: #000;
+        background-color: white;
+        border: 2px solid #48cb8a;
+        outline: 0;
+        box-shadow: none;
+      }
+      .btn {
+        background: #48cb8a;
+        border: #48cb8a;
+      }
+      .btn:hover {
+        background: #48cb8a;
+        border: #48cb8a;
+      }
+      .toggle-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .password-container {
+        position: relative;
+      }
+      .toggle-password {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+      .login-container {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pt-5">
+      <h1 class="text-center">WELCOME</h1>
+
+      <div class="toggle-container">
+        <button class="btn btn-success" onclick="switchToUserLogin()">
+          User Login
+        </button>
+        <button class="btn btn-success" onclick="switchToAdminLogin()">
+          Admin Login
+        </button>
+      </div>
+
+      <div class="login-container">
+        <div class="card card-body">
+          <form class="form" id="login" action="admin-login.php" method="POST">
+            <h2 id="loginTitle" class="text-center">User Login</h2>
+            <div class="form-group required">
+              <label for="username">Username / Email</label>
+              <input
+                type="text"
+                class="form-control text-lowercase"
+                id="username"
+                placeholder="Username"
+                required
+              />
+            </div>
+            <div class="form-group required">
+              <label
+                for="password"
+                class="d-flex justify-content-between align-items-center"
+              >
+                Password
+                <a href="/forget-password" class="green-link small">Forget?</a>
+              </label>
+              <div class="password-container">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  minlength="6"
+                  required
+                />
+                <i
+                  class="fas fa-eye toggle-password"
+                  onclick="togglePasswordVisibility()"
+                ></i>
+              </div>
+            </div>
+            <div class="form-group pt-3 text-center">
+              <button type="submit" class="btn btn-primary w-100">
+                Log In
+              </button>
+            </div>
+            <div id="error" class="text-danger text-center mt-3"></div>
+          </form>
+          <p class="small-xl pt-3 text-center">
+            <span class="text-muted">Don't have an account?</span>
+            <a href="sign-up.html" class="green-link">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function switchToUserLogin() {
+        document.getElementById("loginTitle").textContent = "User Login";
+        document.getElementById("username").placeholder = "User Username";
+        document.getElementById("password").placeholder = "User Password";
+        document.getElementById("error").textContent = "";
+      }
+
+      function switchToAdminLogin() {
+        document.getElementById("loginTitle").textContent = "Admin Login";
+        document.getElementById("username").placeholder = "Admin Username";
+        document.getElementById("password").placeholder = "Admin Password";
+        document.getElementById("error").textContent = "";
+      }
+
+      function togglePasswordVisibility() {
+        const passwordField = document.getElementById("password");
+        const toggleIcon = document.querySelector(".toggle-password");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          toggleIcon.classList.remove("fa-eye");
+          toggleIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordField.type = "password";
+          toggleIcon.classList.remove("fa-eye-slash");
+          toggleIcon.classList.add("fa-eye");
+        }
+      }
+
+      document
+        .getElementById("login")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const errorDiv = document.getElementById("error");
+          const loginTitle = document.getElementById("loginTitle").textContent;
+
+          if (password.length < 6) {
+            errorDiv.textContent =
+              "Password must be at least 6 characters long.";
+            return;
+          }
+
+          if (loginTitle === "User Login") {
+            if (username === "user" && password === "user123") {
+              errorDiv.textContent = "";
+              alert("User login successful!");
+            } else {
+              errorDiv.textContent = "Invalid user credentials";
+            }
+          } else if (loginTitle === "Admin Login") {
+            if (username === "admin" && password === "admin123") {
+              errorDiv.textContent = "";
+              alert("Admin login successful!");
+            } else {
+              errorDiv.textContent = "Invalid admin credentials";
+            }
+          }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

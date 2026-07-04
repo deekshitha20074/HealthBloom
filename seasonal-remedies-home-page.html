@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasonal Remedies</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d9f9d8;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 10px; /* Top alignment */
+        left: 10px; /* Left alignment */
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        background-color: #48cb8a;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; /* Ensures it stays on top */
+      }
+
+      .container {
+        max-width: 500px;
+        background: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        margin: 10px 0;
+      }
+
+      .default-image {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .Seasonal-remedies-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+      }
+
+      .Seasonal-remedies-list li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+      }
+
+      .Seasonal-remedies-list li:last-child {
+        border-bottom: none;
+      }
+
+      .Seasonal-remedies-list h2 {
+        margin: 0;
+        font-size: 16px;
+        color: #48cb8a;
+      }
+
+      .Seasonal-remedies-list span {
+        margin-left: auto;
+        color: #aaa;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .input-group input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .input-group button {
+        margin-left: 10px;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Back Button -->
+     <a href="Welcome-page.html">
+          <button class="back-button" onclick="window.history.back()">Back</button>
+      </a>
+    <div class="container">
+      <header>
+        <h1>Seasonal Remedies</h1>
+        <img
+          src="https://i.ibb.co/vsGtCZq/IMG-20241214-WA0027.jpg"
+          alt="Seasonal Remedies"
+          class="default-image"
+        />
+        <p>Discover effective remedies for common seasonal issues.</p>
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            id="searchInput"
+          />
+          <button>🔍</button>
+        </div>
+      </header>
+      <ul class="Seasonal-remedies-list" id="remediesList">
+        <li>
+          <a href="cold.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Cold</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="soar-throat.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Sore Throat</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="digestive-issues.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Digestive Issues</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="dehydration.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Dehydration</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="sun-burn.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Sunburn</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="body-odor.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Body Odor</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="heat-stroke.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Heat Stroke</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="chappedlips.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Chapped Lips</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="acidity.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Acidity</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="cough.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Cough</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="fever.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Fever</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="mosquitobites.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Mosquito Bites</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="fungalinfections.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Fungal Infections</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="dryskinandcrackedheels.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Dry Skin & Cracked Heels</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+        <li>
+          <a href="pollenallergies.html" style="text-decoration: none; color: inherit;">
+            <div>
+              <h2>Pollen Allergies</h2>
+            </div>
+          </a>
+          <span>&gt;</span>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const searchInput = document.querySelector("#searchInput");
+      const remediesList = document.querySelector("#remediesList");
+
+      searchInput.addEventListener("focus", () => {
+        remediesList.style.display = "block";
+      });
+
+      searchInput.addEventListener("input", (event) => {
+        const query = event.target.value.toLowerCase();
+        const remedyItems = document.querySelectorAll(".Seasonal-remedies-list li");
+
+        remedyItems.forEach((item) => {
+          const itemName = item.querySelector("h2").textContent.toLowerCase();
+          item.style.display = itemName.includes(query) ? "flex" : "none";
+        });
+      });
+
+      searchInput.addEventListener("blur", () => {
+        setTimeout(() => {
+          remediesList.style.display = "none";
+        }, 200);
+      });
+    </script>
+  </body>
+</html>

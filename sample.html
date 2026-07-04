@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health App Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4fc;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+      background-color: #4a90e2;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .header-content img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .description {
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 15px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-item img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .grid-item p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+  <body>
+    <div class="app-container">
+      <div class="header">
+        <h1>Welcome</h1>
+        <div class="header-content">
+          <img src="doctor.png" alt="Doctor" class="doctor" />
+          <img src="nurse.png" alt="Nurse" class="nurse" />
+        </div>
+      </div>
+      <div class="description">
+        <p>
+          We all are participating in strict management to prevent any
+          contagious and keep your health safe
+        </p>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="daily-check.png" alt="Daily Check" />
+          <p>Daily Check</p>
+        </div>
+        <div class="grid-item">
+          <img src="symptoms.png" alt="Symptoms" />
+          <p>Symptoms</p>
+        </div>
+        <div class="grid-item">
+          <img src="treatment.png" alt="Treatment" />
+          <p>Treatment</p>
+        </div>
+        <div class="grid-item">
+          <img src="protection.png" alt="Protection" />
+          <p>Safety</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
